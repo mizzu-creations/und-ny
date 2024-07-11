@@ -1,0 +1,125 @@
+@font-face {
+  font-family: UnDbold;
+  src: url(../../fonts/051d1426d208eda9-s.p.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: UnDbold_Fallback;
+  src: local("Arial");
+  ascent-override: 152.59%;
+  descent-override: 21.41%;
+  line-gap-override: 0%;
+  size-adjust: 58.39%;
+}
+@font-face {
+  font-family: Howlt;
+  src: url(../../fonts/3f7e9b1c34719cf8-s.p.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Howlt_Fallback;
+  src: local("Arial");
+  ascent-override: 98.74%;
+  descent-override: 38.59%;
+  line-gap-override: 0%;
+  size-adjust: 108.44%;
+}
+@font-face {
+  font-family: HowltReg;
+  src: url(../../fonts/45ab4dc4133b69bf-s.p.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: HowltReg_Fallback;
+  src: local("Arial");
+  ascent-override: 90.14%;
+  descent-override: 22.89%;
+  line-gap-override: 0%;
+  size-adjust: 106.17%;
+}
+@font-face {
+  font-family: SuisseReg;
+  src: url(../../fonts/6d3314aaa6cf40fa-s.p.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: SuisseReg_Fallback;
+  src: local("Arial");
+  ascent-override: 91.01%;
+  descent-override: 25.28%;
+  line-gap-override: 0%;
+  size-adjust: 102.74%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.blind {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+html {
+  line-height: 1.5;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-weight: 400;
+  line-height: inherit;
+}/*# sourceMappingURL=style.css.map */
