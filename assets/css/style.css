@@ -97,15 +97,6 @@ ul {
   list-style: none;
 }
 
-.blind {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
-
 html {
   line-height: 1.5;
   -moz-tab-size: 4;
@@ -122,4 +113,93 @@ body {
   margin: 0;
   font-weight: 400;
   line-height: inherit;
+  background-color: #eee;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.blind {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  gap: 25px;
+  position: relative;
+  height: 100vh;
+  padding: 25px 25px;
+}
+#header .logo-area .link-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1%;
+}
+#header .logo-area .link-logo [class*=-box] svg {
+  height: 410px;
+}
+#header .hero-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48svh;
+  overflow: hidden;
+}
+
+#gnb {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 10px;
+}
+#gnb .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#gnb .nav-list .nav-item {
+  font-family: "Howlt", "Howlt_Fallback";
+  font-size: 15px;
+  font-weight: 700;
+}
+#gnb .nav-list .nav-item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+#gnb .nav-list .nav-item button {
+  margin-bottom: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+#header {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 25px;
+  position: relative;
+  height: 100vh;
+  padding: 25px 25px;
+  .logo-area {
+    .link-logo {
+      display: flex;
+      gap: 1%;
+      [class*="-box"] {
+        svg {
+          height: 410px;
+        }
+      }
+    }
+  }
+  .hero-area {
+    display: flex;
+    align-items: center;
+    height: 48svh;
+    overflow: hidden;
+  }
+}
+
+#gnb {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 10px;
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-item {
+      font-family: $Howlt;
+      font-size: 15px;
+      font-weight: 700;
+      &:last-child {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      button {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
