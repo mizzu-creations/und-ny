@@ -1,0 +1,33 @@
+#footer {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    .menu-area {
+      display: flex;
+      justify-content: space-between;
+      .menu-list {
+        font-family: $Howlt;
+        font-weight: 700;
+        font-size: 15px;
+        .menu-item {
+          margin-bottom: 2px;
+        }
+      }
+      .insta-box {
+        svg {
+          width: 52px;
+          margin-top: 5px;
+        }
+      }
+    }
+    .link-logo {
+      display: flex;
+      gap: 1%;
+      svg {
+        height: 480px;
+      }
+    }
+  }
+}

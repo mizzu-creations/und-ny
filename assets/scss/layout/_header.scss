@@ -1,26 +1,28 @@
 #header {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 25px;
   position: relative;
   height: 100vh;
-  padding: 25px 25px;
-  .logo-area {
-    .link-logo {
-      display: flex;
-      gap: 1%;
-      [class*="-box"] {
-        svg {
-          height: 410px;
+  padding: 25px 0;
+  .inner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 25px;
+    .logo-area {
+      .link-logo {
+        display: flex;
+        gap: 1%;
+        [class*="-box"] {
+          svg {
+            height: 410px;
+          }
         }
       }
     }
-  }
-  .hero-area {
-    display: flex;
-    align-items: center;
-    height: 48svh;
-    overflow: hidden;
+    .hero-area {
+      display: flex;
+      align-items: center;
+      height: 48svh;
+      overflow: hidden;
+    }
   }
 }
 

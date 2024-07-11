@@ -1,0 +1,24 @@
+.sc-intro {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    .loop-area {
+      flex: 2;
+    }
+    .desc-area {
+      flex: 1;
+      margin-right: 1vw;
+      p {
+        font-family: $Howlt;
+        font-size: 1.8vw;
+        font-weight: 700;
+        line-height: 115%;
+      }
+    }
+  }
+}
