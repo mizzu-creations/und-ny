@@ -5,10 +5,10 @@
 @import "./base/reset";
 @import "./base/preset";
 
-// @import "./components/...";
-
 @import "./layout/header";
 @import "./layout/footer";
 
-@import "./page/main";
-@import "./page/sc-intro";
+@import "./page/intro";
+@import "./page/breads";
+@import "./page/pastry";
+@import "./page/ingredients";
