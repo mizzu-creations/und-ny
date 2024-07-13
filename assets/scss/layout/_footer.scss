@@ -1,9 +1,17 @@
 #footer {
-  .inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+  .grid {
+    display: grid;
+    grid-template-rows: 1fr 90fr;
+    height: 100dvh;
+    padding: 25px;
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 12px;
+    }
     .menu-area {
       display: flex;
       justify-content: space-between;
@@ -15,18 +23,31 @@
           margin-bottom: 2px;
         }
       }
-      .insta-box {
-        svg {
-          width: 52px;
-          margin-top: 5px;
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .contact-item {
+          &:first-child {
+            line-height: 1;
+          }
+          svg {
+            width: 52px;
+            margin-top: 10px;
+          }
         }
       }
     }
-    .link-logo {
-      display: flex;
-      gap: 1%;
-      svg {
-        height: 480px;
+    .logo-area {
+      display: grid;
+      align-items: end;
+      .link-logo {
+        display: flex;
+        gap: 1%;
+        height: calc((100svh - 48svh - 50px - 48px));
+        svg {
+          height: 480px;
+        }
       }
     }
   }

@@ -136,46 +136,42 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
 }
 
-.inner {
-  padding: 0 25px;
-}
-
 #header {
-  position: relative;
   height: 100vh;
-  padding: 25px 0;
 }
-#header .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+#header .grid {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
   gap: 25px;
+  padding: 25px;
 }
-#header .inner .logo-area .link-logo {
+#header .grid .logo-area {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  height: calc(52svh - 75px);
+}
+#header .grid .logo-area .link-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1%;
 }
-#header .inner .logo-area .link-logo [class*=-box] svg {
-  height: 410px;
+#header .grid .logo-area .link-logo [class*=-box] svg {
+  height: 480px;
 }
-#header .inner .hero-area {
+#header .grid .hero-area {
+  grid-column: 1/-1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 48svh;
   overflow: hidden;
-}
-#header .inner .hero-area img {
-  width: 100%;
 }
 
 #gnb {
@@ -213,7 +209,43 @@ body::-webkit-scrollbar {
   margin-bottom: 2px;
 }
 
-#footer .inner {
+#footer .grid {
+  display: grid;
+  grid-template-rows: 1fr 90fr;
+  height: 100dvh;
+  padding: 25px;
+}
+#footer .grid .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 12px;
+}
+#footer .grid .menu-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#footer .grid .menu-area .menu-list {
+  font-family: "Howlt", "Howlt_Fallback";
+  font-weight: 700;
+  font-size: 15px;
+}
+#footer .grid .menu-area .menu-list .menu-item {
+  margin-bottom: 2px;
+}
+#footer .grid .menu-area .contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,38 +253,31 @@ body::-webkit-scrollbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100vh;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-#footer .inner .menu-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#footer .grid .menu-area .contact-list .contact-item:first-child {
+  line-height: 1;
 }
-#footer .inner .menu-area .menu-list {
-  font-family: "Howlt", "Howlt_Fallback";
-  font-weight: 700;
-  font-size: 15px;
-}
-#footer .inner .menu-area .menu-list .menu-item {
-  margin-bottom: 2px;
-}
-#footer .inner .menu-area .insta-box svg {
+#footer .grid .menu-area .contact-list .contact-item svg {
   width: 52px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
-#footer .inner .link-logo {
+#footer .grid .logo-area {
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+#footer .grid .logo-area .link-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1%;
+  height: calc(52svh - 50px - 48px);
 }
-#footer .inner .link-logo svg {
+#footer .grid .logo-area .link-logo svg {
   height: 480px;
 }
 
@@ -265,30 +290,20 @@ body::-webkit-scrollbar {
           align-items: center;
   height: 100vh;
 }
-.sc-intro .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.sc-intro .grid {
+  display: grid;
+  grid-template-columns: 65vw 1fr;
   gap: 8px;
+  padding: 0 25px;
 }
-.sc-intro .inner .loop-area {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+.sc-intro .grid .loop-area {
+  height: 70vh;
+  overflow: hidden;
 }
-.sc-intro .inner .desc-area {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.sc-intro .grid .desc-area {
   margin-right: 1vw;
 }
-.sc-intro .inner .desc-area p {
+.sc-intro .grid .desc-area p {
   font-family: "Howlt", "Howlt_Fallback";
   font-size: 1.8vw;
   font-weight: 700;

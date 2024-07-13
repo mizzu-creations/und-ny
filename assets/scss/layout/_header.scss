@@ -1,30 +1,31 @@
 #header {
-  position: relative;
   height: 100vh;
-  padding: 25px 0;
-  .inner {
-    display: flex;
-    flex-direction: column-reverse;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
     gap: 25px;
+    padding: 25px;
     .logo-area {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      height: calc(52svh - 75px);
       .link-logo {
         display: flex;
         gap: 1%;
         [class*="-box"] {
           svg {
-            height: 410px;
+            height: 480px;
           }
         }
       }
     }
     .hero-area {
+      grid-column: 1 / -1;
       display: flex;
+      justify-content: center;
       align-items: center;
       height: 48svh;
       overflow: hidden;
-      img {
-        width: 100%;
-      }
     }
   }
 }
