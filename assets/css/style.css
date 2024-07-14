@@ -114,6 +114,7 @@ body {
   font-weight: 400;
   line-height: inherit;
   background-color: #eee;
+  overflow: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -146,6 +147,12 @@ body::-webkit-scrollbar {
   padding: 25px;
 }
 #header .grid .logo-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   grid-column: 1/-1;
   grid-row: 2/3;
   height: calc(52svh - 75px);
@@ -282,6 +289,34 @@ body::-webkit-scrollbar {
 }
 #footer .grid .logo-area .link-logo svg {
   height: 480px;
+}
+
+.sc-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.sc-loading .loading-inner {
+  position: relative;
+  height: 100vh;
+  background-color: #93862c;
+  padding: 0 25px;
+}
+.sc-loading .loading-inner .logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1%;
+  position: absolute;
+  bottom: 0;
+}
+.sc-loading .loading-inner .logo-wrap [class*=-box] svg {
+  height: 480px;
+  fill: #96ff00;
 }
 
 .sc-intro {

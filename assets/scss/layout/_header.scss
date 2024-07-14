@@ -6,6 +6,8 @@
     gap: 25px;
     padding: 25px;
     .logo-area {
+      display: flex;
+      align-items: flex-end;
       grid-column: 1 / -1;
       grid-row: 2 / 3;
       height: calc(52svh - 75px);
