@@ -1,5 +1,6 @@
 .sc-pastry {
-  background-color: #0000c2;
+  padding-bottom: calc(100vw * 0.126 + 250px);
+  // background-color: #0000c2;
   color: #ffab91;
   .group-pastry-intro {
     .grid-area {
@@ -17,17 +18,47 @@
         grid-column: 18 / -1;
         grid-row: 4 / 12;
       }
-      .grid-item:nth-child(3) {
+      h3.grid-item {
         grid-column: 17 / -1;
         grid-row: 20 / 24;
-        h3 {
-          font-family: $UnDbold;
-          font-size: 62.5px;
-          line-height: 0.8;
-          letter-spacing: 1px;
+        justify-self: end;
+        align-self: flex-end;
+        font-family: $UnDbold;
+        font-size: 62.5px;
+        line-height: 0.8;
+        letter-spacing: 1px;
+      }
+    }
+    .desc-area {
+      display: grid;
+      grid-template-columns: repeat(24, 1fr);
+      row-gap: 5rem;
+      max-width: 2000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 50px 35px 50px;
+      .intro-desc {
+        display: flex;
+        flex-direction: column;
+        grid-column: 18 / -1;
+        grid-row: 1 / 2;
+        gap: 32px;
+        line-height: 1.25;
+        a {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          align-items: center;
+          gap: 8px;
+          width: 95%;
+          font-size: 18px;
+          font-weight: 700;
+          .border {
+            width: 100%;
+            height: 5px;
+            margin-top: 2px;
+            background-color: #ffab91;
+          }
         }
-        // p {
-        // }
       }
     }
   }

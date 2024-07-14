@@ -1,5 +1,6 @@
 .sc-ingredients {
-  background-color: #ff814a;
+  padding-bottom: calc(100vw * 0.126 + 250px);
+  // background-color: #ff814a;
   color: #025431;
   .group-ingredients-intro {
     .grid-area {
@@ -11,20 +12,36 @@
       .grid-item:nth-child(1) {
         grid-column: 11 / -1;
         grid-row: 6 / 24;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
       }
       .grid-item:nth-child(2) {
         grid-column: 2 / 8;
         grid-row: 4 / 12;
       }
-      .grid-item:nth-child(3) {
+      h3.grid-item {
         grid-column: 2 / 12;
         grid-row: 20 / 24;
-        h3 {
-          line-height: 0.8;
-          font-size: 62.5px;
-          font-family: $UnDbold;
-        }
-        // p {}
+        align-self: flex-end;
+        line-height: 0.8;
+        font-size: 62.5px;
+        font-family: $UnDbold;
+      }
+    }
+    .desc-area {
+      display: grid;
+      grid-template-columns: repeat(24, 1fr);
+      row-gap: 5rem;
+      max-width: 2000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 50px 35px 50px;
+      .intro-desc {
+        grid-column: 2 / 10;
+        grid-row: 1 / 2;
+        line-height: 1.4;
       }
     }
   }

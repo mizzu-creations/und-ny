@@ -173,6 +173,9 @@ body::-webkit-scrollbar {
   height: 48svh;
   overflow: hidden;
 }
+#header .grid .hero-area img {
+  width: 100%;
+}
 
 #gnb {
   position: absolute;
@@ -311,14 +314,8 @@ body::-webkit-scrollbar {
 }
 
 .sc-breads {
-  background-color: #93862c;
+  padding-bottom: calc(12.6vw + 250px);
   color: #96ff00;
-}
-.sc-breads .group-breads-intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
 }
 .sc-breads .group-breads-intro .grid-area {
   display: grid;
@@ -340,14 +337,48 @@ body::-webkit-scrollbar {
 }
 .sc-breads .group-breads-intro .grid-area h3.grid-item {
   grid-column: 2/12;
-  grid-row: 20/22;
+  grid-row: 22/24;
   font-family: "UnDbold", "UnDbold_Fallback";
   font-size: 62.5px;
   line-height: 62.5px;
 }
-.sc-breads .group-breads-intro .grid-area p.grid-item {
-  grid-column: 2/8;
-  grid-row: 22/24;
+.sc-breads .group-breads-intro .desc-area {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  row-gap: 5rem;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 50px 35px 50px;
+}
+.sc-breads .group-breads-intro .desc-area .intro-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-column: 2/10;
+  gap: 32px;
+  line-height: 1.25;
+}
+.sc-breads .group-breads-intro .desc-area .intro-desc a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  width: 95%;
+  font-size: 18px;
+  font-weight: 700;
+}
+.sc-breads .group-breads-intro .desc-area .intro-desc a .border {
+  width: 100%;
+  height: 5px;
+  margin-top: 2px;
+  background-color: rgb(150, 255, 0);
 }
 .sc-breads .group-almond-milk h3,
 .sc-breads .group-almond-milk p {
@@ -387,7 +418,7 @@ body::-webkit-scrollbar {
 }
 
 .sc-pastry {
-  background-color: #0000c2;
+  padding-bottom: calc(12.6vw + 250px);
   color: #ffab91;
 }
 .sc-pastry .group-pastry-intro .grid-area {
@@ -406,15 +437,54 @@ body::-webkit-scrollbar {
   grid-column: 18/-1;
   grid-row: 4/12;
 }
-.sc-pastry .group-pastry-intro .grid-area .grid-item:nth-child(3) {
+.sc-pastry .group-pastry-intro .grid-area h3.grid-item {
   grid-column: 17/-1;
   grid-row: 20/24;
-}
-.sc-pastry .group-pastry-intro .grid-area .grid-item:nth-child(3) h3 {
+  justify-self: end;
+  align-self: flex-end;
   font-family: "UnDbold", "UnDbold_Fallback";
   font-size: 62.5px;
   line-height: 0.8;
   letter-spacing: 1px;
+}
+.sc-pastry .group-pastry-intro .desc-area {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  row-gap: 5rem;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 50px 35px 50px;
+}
+.sc-pastry .group-pastry-intro .desc-area .intro-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-column: 18/-1;
+  grid-row: 1/2;
+  gap: 32px;
+  line-height: 1.25;
+}
+.sc-pastry .group-pastry-intro .desc-area .intro-desc a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  width: 95%;
+  font-size: 18px;
+  font-weight: 700;
+}
+.sc-pastry .group-pastry-intro .desc-area .intro-desc a .border {
+  width: 100%;
+  height: 5px;
+  margin-top: 2px;
+  background-color: #ffab91;
 }
 .sc-pastry .group-pastry-cookies h3 {
   text-align: center;
@@ -447,7 +517,7 @@ body::-webkit-scrollbar {
 }
 
 .sc-ingredients {
-  background-color: #ff814a;
+  padding-bottom: calc(12.6vw + 250px);
   color: #025431;
 }
 .sc-ingredients .group-ingredients-intro .grid-area {
@@ -461,18 +531,36 @@ body::-webkit-scrollbar {
   grid-column: 11/-1;
   grid-row: 6/24;
 }
+.sc-ingredients .group-ingredients-intro .grid-area .grid-item:nth-child(1) img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .sc-ingredients .group-ingredients-intro .grid-area .grid-item:nth-child(2) {
   grid-column: 2/8;
   grid-row: 4/12;
 }
-.sc-ingredients .group-ingredients-intro .grid-area .grid-item:nth-child(3) {
+.sc-ingredients .group-ingredients-intro .grid-area h3.grid-item {
   grid-column: 2/12;
   grid-row: 20/24;
-}
-.sc-ingredients .group-ingredients-intro .grid-area .grid-item:nth-child(3) h3 {
+  align-self: flex-end;
   line-height: 0.8;
   font-size: 62.5px;
   font-family: "UnDbold", "UnDbold_Fallback";
+}
+.sc-ingredients .group-ingredients-intro .desc-area {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  row-gap: 5rem;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 50px 35px 50px;
+}
+.sc-ingredients .group-ingredients-intro .desc-area .intro-desc {
+  grid-column: 2/10;
+  grid-row: 1/2;
+  line-height: 1.4;
 }
 .sc-ingredients .group-ingredients-product h3 {
   text-align: center;
