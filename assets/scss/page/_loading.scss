@@ -17,6 +17,7 @@
       position: absolute;
       bottom: 0;
       [class*="-box"] {
+        transform: translateY(100%);
         svg {
           height: 480px;
           fill: $breadsPoint;

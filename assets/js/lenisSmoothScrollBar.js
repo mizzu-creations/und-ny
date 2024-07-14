@@ -1,10 +1,6 @@
 export const lenisSmoothScrollBar = () => {
   const lenis = new Lenis();
 
-  lenis.on("scroll", (e) => {
-    // console.log(e);
-  });
-
   lenis.on("scroll", ScrollTrigger.update);
 
   gsap.ticker.add((time) => {
@@ -17,10 +13,5 @@ export const lenisSmoothScrollBar = () => {
     trigger: "#wrapper",
     start: "0% 0%",
     end: "100% 100%",
-    markers: true,
-    id: "scroll",
-    onUpdate: (self) => {
-      // console.log(self);
-    },
   });
 };

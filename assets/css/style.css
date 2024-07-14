@@ -114,7 +114,6 @@ body {
   font-weight: 400;
   line-height: inherit;
   background-color: #eee;
-  overflow: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -138,6 +137,7 @@ body::-webkit-scrollbar {
 }
 
 #header {
+  position: relative;
   height: 100vh;
 }
 #header .grid {
@@ -313,6 +313,10 @@ body::-webkit-scrollbar {
   gap: 1%;
   position: absolute;
   bottom: 0;
+}
+.sc-loading .loading-inner .logo-wrap [class*=-box] {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 .sc-loading .loading-inner .logo-wrap [class*=-box] svg {
   height: 480px;
