@@ -36,7 +36,7 @@ export const overScrollBouncing = (containerElem, contentElem, dampValue) => {
 
     const next = offset - ((dis * damping) | 0);
 
-    content.style.transform = `translate3d(0, ${-next}px, 0)`;
+    content.style.marginTop = `${-next}px`;
 
     rendered = next;
     offset = (offset * damping) | 0;
@@ -104,6 +104,6 @@ export const overScrollBouncing = (containerElem, contentElem, dampValue) => {
         }
       },
       { passive: false }
-    ); // passive: false 옵션 추가
+    );
   });
 };

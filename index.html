@@ -14,6 +14,7 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/split-type"></script>
     <script type="module" src="./assets/js/main.js" defer></script>
   </head>
   <body>
@@ -93,7 +94,7 @@
             </defs>
           </svg>
         </div>
-        <!-- <section class="sc-loading">
+        <section class="sc-loading">
           <div class="loading-inner">
             <div class="logo-wrap">
               <div class="logo-u-box">
@@ -125,7 +126,7 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <header id="header">
           <div class="grid">
             <h1 class="logo-area">
@@ -427,37 +428,126 @@
           </section>
           <section class="sc-breads">
             <h2 class="blind">Bread 영역</h2>
-            <div class="group-breads-intro">
-              <div class="grid-area">
-                <div class="grid-item bread">
-                  <img src="./assets/images/bread_01.webp" alt />
+            <div class="intro-wrapper">
+              <div class="group-breads-intro sequence-01">
+                <div class="grid-area">
+                  <div class="grid-wrap">
+                    <div class="grid-box">
+                      <div class="grid-item bread">
+                        <img src="./assets/images/bread_01.webp" alt />
+                      </div>
+                      <div class="grid-item test">
+                        <img src="./assets/images/test_01.webp" alt />
+                      </div>
+                      <div class="grid-item title">
+                        <h3 class="uppercase">breads</h3>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <img
-                  class="grid-item test"
-                  src="./assets/images/test_01.webp"
-                  alt
-                />
-                <h3 class="grid-item uppercase">breads</h3>
               </div>
-              <div class="desc-area">
-                <div class="intro-desc">
-                  <p>
-                    Our bread is handmade with carefully selected, safe, and
-                    secure ingredients, and is completely additive-free. We use
-                    organic flour and a unique formula that includes up to 75%
-                    almond milk, heavy cream, and water to create a moist,
-                    fluffy bread with a mellow flavor. Almond milk contains less
-                    fat and fewer calories than raw milk, and is rich in
-                    minerals and vitamins. It also adds natural sweetness and a
-                    mellow mouthfeel, giving it a taste more akin to brioche
-                    than ordinary bread. Three different flavors are available:
-                    Basic, Chocolate, and Condensed Milk.
-                  </p>
-                  <a href="">
-                    <span>Learn More</span>
-                    <div class="border"></div>
-                    <span>Almond Milk Bread</span>
+              <div class="group-breads-intro sequence-02">
+                <div class="grid-area">
+                  <div class="grid-wrap">
+                    <div class="grid-box">
+                      <div class="grid-item bread">
+                        <img src="./assets/images/bread_02.webp" alt />
+                      </div>
+                      <div class="grid-item test">
+                        <img src="./assets/images/test_02.webp" alt />
+                      </div>
+                      <div class="grid-item title">
+                        <h3 class="uppercase">breads</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fixed-logo">
+                  <a href="" class="link-logo">
+                    <span class="blind">UnD 로고</span>
+                    <div class="logo-u-box">
+                      <svg
+                        class="logo-u"
+                        viewBox="0 0 20 52"
+                        preserveAspectRatio="xMinYMin meet"
+                      >
+                        <use xlink:href="#logo-u" x="0" y="0"></use>
+                      </svg>
+                    </div>
+                    <div class="logo-n-box">
+                      <svg
+                        class="logo-n"
+                        viewBox="0 0 20 52"
+                        preserveAspectRatio="xMinYMin meet"
+                      >
+                        <use xlink:href="#logo-n" x="0" y="0"></use>
+                      </svg>
+                    </div>
+                    <div class="logo-d-box">
+                      <svg
+                        class="logo-d"
+                        viewBox="0 0 21 52"
+                        preserveAspectRatio="xMinYMin meet"
+                      >
+                        <use xlink:href="#logo-d" x="0" y="0"></use>
+                      </svg>
+                    </div>
                   </a>
+                </div>
+                <div class="bg">
+                  <div class="bg-fixed-logo">
+                    <a href="" class="link-logo">
+                      <span class="blind">UnD 로고</span>
+                      <div class="logo-u-box">
+                        <svg
+                          class="logo-u"
+                          viewBox="0 0 20 52"
+                          preserveAspectRatio="xMinYMin meet"
+                        >
+                          <use xlink:href="#logo-u" x="0" y="0"></use>
+                        </svg>
+                      </div>
+                      <div class="logo-n-box">
+                        <svg
+                          class="logo-n"
+                          viewBox="0 0 20 52"
+                          preserveAspectRatio="xMinYMin meet"
+                        >
+                          <use xlink:href="#logo-n" x="0" y="0"></use>
+                        </svg>
+                      </div>
+                      <div class="logo-d-box">
+                        <svg
+                          class="logo-d"
+                          viewBox="0 0 21 52"
+                          preserveAspectRatio="xMinYMin meet"
+                        >
+                          <use xlink:href="#logo-d" x="0" y="0"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="desc-area">
+                  <div class="intro-desc">
+                    <p>
+                      Our bread is handmade with carefully selected, safe, and
+                      secure ingredients, and is completely additive-free. We
+                      use organic flour and a unique formula that includes up to
+                      75% almond milk, heavy cream, and water to create a moist,
+                      fluffy bread with a mellow flavor. Almond milk contains
+                      less fat and fewer calories than raw milk, and is rich in
+                      minerals and vitamins. It also adds natural sweetness and
+                      a mellow mouthfeel, giving it a taste more akin to brioche
+                      than ordinary bread. Three different flavors are
+                      available: Basic, Chocolate, and Condensed Milk.
+                    </p>
+                    <a href="">
+                      <span>Learn More</span>
+                      <div class="border"></div>
+                      <span>Almond Milk Bread</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -482,35 +572,69 @@
           </section>
           <section class="sc-pastry">
             <h2 class="blind">Pastry 영역</h2>
-            <div class="group-pastry-intro">
-              <div class="grid-area">
-                <div class="grid-item">
-                  <img src="./assets/images/pastry_02.webp" alt />
+            <div class="intro-wrapper">
+              <div class="group-pastry-intro sequence-01">
+                <div class="grid-area">
+                  <div class="grid-item">
+                    <img src="./assets/images/pastry_02.webp" alt />
+                  </div>
+                  <div class="grid-item">
+                    <img src="./assets/images/cartoon_02.gif" alt />
+                  </div>
+                  <h3 class="grid-item uppercase">Pastry</h3>
                 </div>
-                <div class="grid-item">
-                  <img src="./assets/images/cartoon_02.gif" alt />
+                <div class="desc-area">
+                  <div class="intro-desc">
+                    <p>
+                      The Melon bread, a very famous Japanese sweet bread, and
+                      cookies made with Japanese ingredients are available. Our
+                      melon bread is made with UnD's signature almond milk bread
+                      dough and baked with almond pudding kneaded cookie dough
+                      on top, making it fluffy, crispy. Our cookies are crispy
+                      on the outside and moist on the inside with a very elegant
+                      sweetness. The cookies come in three different flavors:
+                      the basic cookie, a matcha cookie made with premium Uji
+                      matcha green tea, and a buckwheat tea cookie made with
+                      traditional Japanese buckwheat tea.
+                    </p>
+                    <a href="">
+                      <span>Learn More</span>
+                      <div class="border"></div>
+                      <span>Pastry</span>
+                    </a>
+                  </div>
                 </div>
-                <h3 class="grid-item uppercase">Pastry</h3>
               </div>
-              <div class="desc-area">
-                <div class="intro-desc">
-                  <p>
-                    The Melon bread, a very famous Japanese sweet bread, and
-                    cookies made with Japanese ingredients are available. Our
-                    melon bread is made with UnD's signature almond milk bread
-                    dough and baked with almond pudding kneaded cookie dough on
-                    top, making it fluffy, crispy. Our cookies are crispy on the
-                    outside and moist on the inside with a very elegant
-                    sweetness. The cookies come in three different flavors: the
-                    basic cookie, a matcha cookie made with premium Uji matcha
-                    green tea, and a buckwheat tea cookie made with traditional
-                    Japanese buckwheat tea.
-                  </p>
-                  <a href="">
-                    <span>Learn More</span>
-                    <div class="border"></div>
-                    <span>Pastry</span>
-                  </a>
+              <div class="group-pastry-intro sequence-02">
+                <div class="grid-area">
+                  <div class="grid-item">
+                    <img src="./assets/images/pastry_02.webp" alt />
+                  </div>
+                  <div class="grid-item">
+                    <img src="./assets/images/cartoon_02.gif" alt />
+                  </div>
+                  <h3 class="grid-item uppercase">Pastry</h3>
+                </div>
+                <div class="desc-area">
+                  <div class="intro-desc">
+                    <p>
+                      The Melon bread, a very famous Japanese sweet bread, and
+                      cookies made with Japanese ingredients are available. Our
+                      melon bread is made with UnD's signature almond milk bread
+                      dough and baked with almond pudding kneaded cookie dough
+                      on top, making it fluffy, crispy. Our cookies are crispy
+                      on the outside and moist on the inside with a very elegant
+                      sweetness. The cookies come in three different flavors:
+                      the basic cookie, a matcha cookie made with premium Uji
+                      matcha green tea, and a buckwheat tea cookie made with
+                      traditional Japanese buckwheat tea.
+                    </p>
+                    <a href="">
+                      <span>Learn More</span>
+                      <div class="border"></div>
+                      <span>Pastry</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -542,35 +666,71 @@
           </section>
           <section class="sc-ingredients">
             <h2 class="blind">Ingredients 영역</h2>
-            <div class="group-ingredients-intro">
-              <div class="grid-area">
-                <div class="grid-item">
-                  <img src="./assets/images/matcha_02.webp" alt />
+            <div class="intro-wrapper">
+              <div class="group-ingredients-intro sequence-01">
+                <div class="grid-area">
+                  <div class="grid-item">
+                    <img src="./assets/images/matcha_02.webp" alt />
+                  </div>
+                  <div class="grid-item">
+                    <img src="./assets/images/soup_02_01.webp" alt />
+                  </div>
+                  <h3 class="grid-item uppercase">ingredients</h3>
                 </div>
-                <div class="grid-item">
-                  <img src="./assets/images/soup_02_01.webp" alt />
+                <div class="desc-area">
+                  <div class="intro-desc">
+                    <p>
+                      The finest Uji Matcha and completely additive-free
+                      original miso are available. Our Uji Matcha from Kyoto
+                      Prefecture is the highest quality matcha produced with
+                      historical background and processing methods using 100%
+                      tea leaves produced exclusively in Kyoto. We source our
+                      high-quality, healthy, authentic matcha directly from the
+                      farmers. <br />
+                      Our original miso is made by by a female miso maker with
+                      30 years of miso making experience using rice koji
+                      inherited from a long-established soy sauce shop located
+                      at the foot of Todaiji Temple in Nara that has been in
+                      operation for 160 years, and completely additive-free
+                      handmade miso made with Japanese soybeans. Miso is
+                      considered the pride of Japan as a superfood with many
+                      health benefits. Please try our delicious and essential
+                      Japanese ingredients for your health!
+                    </p>
+                  </div>
                 </div>
-                <h3 class="grid-item uppercase">ingredients</h3>
               </div>
-              <div class="desc-area">
-                <div class="intro-desc">
-                  <p>
-                    The finest Uji Matcha and completely additive-free original
-                    miso are available. Our Uji Matcha from Kyoto Prefecture is
-                    the highest quality matcha produced with historical
-                    background and processing methods using 100% tea leaves
-                    produced exclusively in Kyoto. We source our high-quality,
-                    healthy, authentic matcha directly from the farmers. <br />
-                    Our original miso is made by by a female miso maker with 30
-                    years of miso making experience using rice koji inherited
-                    from a long-established soy sauce shop located at the foot
-                    of Todaiji Temple in Nara that has been in operation for 160
-                    years, and completely additive-free handmade miso made with
-                    Japanese soybeans. Miso is considered the pride of Japan as
-                    a superfood with many health benefits. Please try our
-                    delicious and essential Japanese ingredients for your
-                    health!
-                  </p>
+              <div class="group-ingredients-intro sequence-02">
+                <div class="grid-area">
+                  <div class="grid-item">
+                    <img src="./assets/images/matcha_02.webp" alt />
+                  </div>
+                  <div class="grid-item">
+                    <img src="./assets/images/soup_02_01.webp" alt />
+                  </div>
+                  <h3 class="grid-item uppercase">ingredients</h3>
+                </div>
+                <div class="desc-area">
+                  <div class="intro-desc">
+                    <p>
+                      The finest Uji Matcha and completely additive-free
+                      original miso are available. Our Uji Matcha from Kyoto
+                      Prefecture is the highest quality matcha produced with
+                      historical background and processing methods using 100%
+                      tea leaves produced exclusively in Kyoto. We source our
+                      high-quality, healthy, authentic matcha directly from the
+                      farmers. <br />
+                      Our original miso is made by by a female miso maker with
+                      30 years of miso making experience using rice koji
+                      inherited from a long-established soy sauce shop located
+                      at the foot of Todaiji Temple in Nara that has been in
+                      operation for 160 years, and completely additive-free
+                      handmade miso made with Japanese soybeans. Miso is
+                      considered the pride of Japan as a superfood with many
+                      health benefits. Please try our delicious and essential
+                      Japanese ingredients for your health!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

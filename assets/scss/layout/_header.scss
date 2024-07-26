@@ -12,12 +12,18 @@
       grid-column: 1 / -1;
       grid-row: 2 / 3;
       height: calc(52svh - 75px);
+      z-index: 50;
       .link-logo {
         display: flex;
         gap: 1%;
+        width: 100%;
+        height: 100%;
+        transform-origin: top left;
+        cursor: auto;
         [class*="-box"] {
+          cursor: pointer;
           svg {
-            height: 480px;
+            height: calc(52svh);
           }
         }
       }
@@ -41,6 +47,7 @@
   left: 25px;
   right: 25px;
   bottom: 10px;
+  z-index: 50;
   .nav-list {
     display: flex;
     justify-content: space-between;

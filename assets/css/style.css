@@ -156,15 +156,24 @@ body::-webkit-scrollbar {
   grid-column: 1/-1;
   grid-row: 2/3;
   height: calc(52svh - 75px);
+  z-index: 50;
 }
 #header .grid .logo-area .link-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  cursor: auto;
+}
+#header .grid .logo-area .link-logo [class*=-box] {
+  cursor: pointer;
 }
 #header .grid .logo-area .link-logo [class*=-box] svg {
-  height: 480px;
+  height: 52svh;
 }
 #header .grid .hero-area {
   grid-column: 1/-1;
@@ -189,6 +198,7 @@ body::-webkit-scrollbar {
   left: 25px;
   right: 25px;
   bottom: 10px;
+  z-index: 50;
 }
 #gnb .nav-list {
   display: -webkit-box;
@@ -291,6 +301,27 @@ body::-webkit-scrollbar {
   height: 480px;
 }
 
+[class*=sc-] {
+  position: relative;
+}
+[class*=sc-] .intro-wrapper {
+  position: sticky;
+  top: 0;
+  height: 500vh;
+  background-color: #93862c;
+}
+[class*=sc-] .intro-wrapper [class*=sequence-] {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+[class*=sc-] .intro-wrapper [class*=sequence-].sequence-01 {
+  z-index: 1;
+}
+[class*=sc-] .intro-wrapper [class*=sequence-].sequence-01 .grid-item.title h3 {
+  color: #000;
+}
+
 .sc-loading {
   position: absolute;
   top: 0;
@@ -298,7 +329,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
+  z-index: 100;
 }
 .sc-loading .loading-inner {
   position: relative;
@@ -311,6 +342,7 @@ body::-webkit-scrollbar {
   display: -ms-flexbox;
   display: flex;
   gap: 1%;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
@@ -319,7 +351,7 @@ body::-webkit-scrollbar {
           transform: translateY(100%);
 }
 .sc-loading .loading-inner .logo-wrap [class*=-box] svg {
-  height: 480px;
+  height: 52svh;
   fill: #96ff00;
 }
 
@@ -353,35 +385,107 @@ body::-webkit-scrollbar {
 }
 
 .sc-breads {
+  position: relative;
+  height: 1000vh;
   padding-bottom: calc(12.6vw + 250px);
+  background-color: #93862c;
   color: #96ff00;
 }
-.sc-breads .group-breads-intro .grid-area {
+.sc-breads .intro-wrapper .group-breads-intro .grid-area {
+  height: 100vh;
+}
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(24, 1fr);
   width: 100vw;
-  max-height: 932px;
-  height: 932px;
+  height: 100vh;
   padding: 0 50px;
 }
-.sc-breads .group-breads-intro .grid-area .grid-item.bread {
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box .grid-item.bread {
+  position: relative;
+  width: auto;
+  height: 100%;
   grid-column: 12/-1;
   grid-row: 5/24;
   overflow: hidden;
 }
-.sc-breads .group-breads-intro .grid-area .grid-item.test {
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box .grid-item.bread img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box .grid-item.test {
+  position: relative;
+  width: auto;
+  height: 100%;
   grid-column: 2/8;
   grid-row: 4/12;
+  overflow: hidden;
 }
-.sc-breads .group-breads-intro .grid-area h3.grid-item {
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box .grid-item.test img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box .grid-item.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   grid-column: 2/12;
   grid-row: 22/24;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.sc-breads .intro-wrapper .group-breads-intro .grid-area .grid-wrap .grid-box .grid-item.title h3 {
+  margin-left: -1px;
   font-family: "UnDbold", "UnDbold_Fallback";
   font-size: 62.5px;
-  line-height: 62.5px;
+  line-height: 0.76;
 }
-.sc-breads .group-breads-intro .desc-area {
+.sc-breads .intro-wrapper .group-breads-intro .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eee;
+}
+.sc-breads .intro-wrapper .group-breads-intro .bg .bg-fixed-logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 100%;
+}
+.sc-breads .intro-wrapper .group-breads-intro .bg .bg-fixed-logo .link-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+.sc-breads .intro-wrapper .group-breads-intro .bg .bg-fixed-logo .link-logo [class*=-box] svg {
+  height: 52svh;
+}
+.sc-breads .intro-wrapper .group-breads-intro .desc-area {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   row-gap: 5rem;
@@ -390,7 +494,7 @@ body::-webkit-scrollbar {
   margin-right: auto;
   padding: 0 50px 35px 50px;
 }
-.sc-breads .group-breads-intro .desc-area .intro-desc {
+.sc-breads .intro-wrapper .group-breads-intro .desc-area .intro-desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,7 +506,7 @@ body::-webkit-scrollbar {
   gap: 32px;
   line-height: 1.25;
 }
-.sc-breads .group-breads-intro .desc-area .intro-desc a {
+.sc-breads .intro-wrapper .group-breads-intro .desc-area .intro-desc a {
   display: grid;
   grid-template-columns: auto 1fr auto;
   -webkit-box-align: center;
@@ -413,11 +517,14 @@ body::-webkit-scrollbar {
   font-size: 18px;
   font-weight: 700;
 }
-.sc-breads .group-breads-intro .desc-area .intro-desc a .border {
+.sc-breads .intro-wrapper .group-breads-intro .desc-area .intro-desc a .border {
   width: 100%;
   height: 5px;
   margin-top: 2px;
   background-color: rgb(150, 255, 0);
+}
+.sc-breads .group-almond-milk {
+  background-color: #93862c;
 }
 .sc-breads .group-almond-milk h3,
 .sc-breads .group-almond-milk p {
@@ -454,6 +561,29 @@ body::-webkit-scrollbar {
 .sc-breads .group-almond-milk .grid-area .grid-item:nth-child(4) {
   grid-column: 9/-1;
   padding-top: 4vw;
+}
+
+.fixed-logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 100%;
+}
+.fixed-logo .link-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0.064);
+          transform: scale(0.064);
+}
+.fixed-logo .link-logo [class*=-box] svg {
+  height: 52svh;
+  fill: #96ff00;
 }
 
 .sc-pastry {
